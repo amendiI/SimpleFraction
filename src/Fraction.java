@@ -1,7 +1,7 @@
 
 public class Fraction {
 	private int numerateur;
-	private int denominateur;
+	private int denominateur;;
 	
 	public Fraction(int n,int d)
 	{
