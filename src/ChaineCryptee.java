@@ -8,15 +8,31 @@ public class ChaineCryptee {
 		decal=decalage;
 	}
 	
+	/**
+	 * Décale un charactère majuscule
+	 * les lettres en majuscule('A'-'Z') sont décalé de <code>decalage</code>
+	 * caractère de façon circulaire. Les autres charactère ne sont pas modifié
+	 * en cas de chaine null, rien ne se passe
+	 * @param c le charactèree a décaler
+	 * @param decalage le décalage appliqué
+	 * @return les charactère décalé
+	 */
+	
+	private static char decalCaractere(char c,int decalage){
+		return (c<'A'||c>'Z')? c:(char)(((c-'A'+decalage)%26)+'A');
+	}
 	public String crypte(){
 		StringBuilder crypte=new StringBuilder();
 		for(int i=0;i<enclair.length();i++)
 		{
 			crypte.append(decalCaractere(enclair.charAt(i),decal));
 		}
+		enclair=new String(crypte.toString());
 		return crypte.toString();
 	}
-	private static char decalCaractere(char c,int decalage){
-		return (c<'A'||c>'Z')? c:(char)(((c-'A'+decalage)%26)+'A');
+	
+	public String getmessage()
+	{
+		return enclair;
 	}
 }
