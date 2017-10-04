@@ -3,9 +3,22 @@ public class ChaineCryptee {
 	String enclair;
 	int decal;
 	
-	public ChaineCryptee(String message,int decalage){
-		enclair=message;
+	private ChaineCryptee(String messageclair,int decalage){
+		enclair=messageclair;
 		decal=decalage;
+	}
+	
+	public static ChaineCryptee addcripte(int decalage,String messagecrypte)
+	{
+		return new ChaineCryptee(messagecrypte,decalage);
+	}
+	
+	public static ChaineCryptee addclair(int decalage,String messagecrypte)
+	{
+		ChaineCryptee C =new ChaineCryptee(messagecrypte,decalage);
+		C.crypte();
+		return new ChaineCryptee(C.getmessage(),decalage);
+		  
 	}
 	
 	/**

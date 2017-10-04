@@ -21,6 +21,9 @@ public class Fraction {
 		this.denominateur=1;
 	}
 	
+	public static final Fraction ZERO = new Fraction(0, 1);
+    public static final Fraction ONE = new Fraction(1, 1);
+	
 	public int getdenominateur()
 	{
 		return denominateur;
@@ -85,8 +88,6 @@ public class Fraction {
 		else{
 			return 1;
 		}
-			
-			
 	}
 }
 

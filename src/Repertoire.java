@@ -17,7 +17,7 @@ public class Repertoire {
 		int total=0;
 		for(int i=0;i<lr.size();i++)
 		{
-			total =+lr.get(i).calcultaille();
+			total =total+lr.get(i).calcultaille();
 		}
 		for(int i=0;i<lf.size();i++)
 		{
@@ -39,5 +39,22 @@ public class Repertoire {
 		} 
 	}
 	
+
+	public boolean notIntegrer (Repertoire R){
+		int i;
+		List<Repertoire> current;
+		current = R.lr; 
+		
+		if (current.size() == 0)
+			return true;
+		
+		for (i = 0; i<current.size(); i++){
+			if (R==this)
+				return false;
+			
+			return notIntegrer(current.get(i));
+		}
+		return true; 
+	}
 	
 }

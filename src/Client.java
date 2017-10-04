@@ -10,6 +10,7 @@ public class Client {
 	public boolean seConnecter(Serveur serv)
 	{
 		this.serv=serv;
+		serv.Connecter(this);
 		return (serv!=null);
 	}
 	public  void envoyer(String message)
@@ -18,6 +19,7 @@ public class Client {
 	}
 	public String recevoir(String str)
 	{
+		System.out.println(nom +": " +str);
 		return str;
 	}
 }

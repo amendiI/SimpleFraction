@@ -12,6 +12,7 @@ public class Serveur {
 	public boolean Connecter(Client C)
 	{
 		liste.add(C);
+		//System.out.println(C.getnom());
 		return true;
 	}
 	
