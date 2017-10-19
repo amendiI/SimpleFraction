@@ -44,6 +44,15 @@ public class ChaineCryptee {
 		return crypte.toString();
 	}
 	
+	public String decrypte(){
+		StringBuilder decrypte=new StringBuilder();
+		for(int i=0;i<enclair.length();i++)
+		{
+			decrypte.append(decalCaractere(enclair.charAt(i),26-decal));
+		}
+		return decrypte.toString();
+	}
+	
 	public String getmessage()
 	{
 		return enclair;

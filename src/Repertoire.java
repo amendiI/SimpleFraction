@@ -21,7 +21,7 @@ public class Repertoire {
 		}
 		for(int i=0;i<lf.size();i++)
 		{
-			total=+lf.get(i).gettaille();
+			total=total+lf.get(i).gettaille();
 		}
 		return total;
 	}

@@ -6,8 +6,9 @@ public class main {
 		
 		ChaineCryptee C = ChaineCryptee.addcripte(5,"AZERTYUI");
 		System.out.println(C.getmessage());
+		System.out.println(C.decrypte());
 		
-		ChaineCryptee C2=ChaineCryptee.addclair(5,"AZERTYUI");
+		ChaineCryptee C2=ChaineCryptee.addclair(5,"VUZMOTPD");
 		System.out.println(C2.getmessage());
 		
 		
